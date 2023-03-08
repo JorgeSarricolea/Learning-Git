@@ -56,7 +56,7 @@ git log
 
 
 
-### Time travel (Through commits)
+### <br>Time travel (Through commits)</br>
 
 ##### How we can move between the different commits that we have registered, suppose we have the following commits:
 
