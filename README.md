@@ -12,7 +12,7 @@
 
 ##### Let's learn the first commands with git
 
-## To display the git version
+#### To display the git version
 ```
 git version
 ```
