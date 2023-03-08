@@ -26,12 +26,11 @@ git config --global user.name "my name"
 ```
 git config --global user.email "myemail@example.com"
 ```
-### To get help 
+#### To get help 
 ```
 git help
 ```
-### My first repository
-#### Start a new repository and create the hidden .git folder
+#### My first repository. Start a new repository and create the hidden .git folder
 ```
 git init
 ```
