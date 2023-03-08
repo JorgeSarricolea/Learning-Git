@@ -31,9 +31,8 @@ git config --global user.email "myemail@example.com"
 git help
 ```
 ### My first repository
+#### Start a new repository and create the hidden .git folder
 ```
-// Start a new repository
-// Create the hidden .git folder
 git init
 ```
 
