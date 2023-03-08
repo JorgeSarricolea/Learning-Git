@@ -54,8 +54,6 @@ git log
 ##### In conclusion, we make changes to our files, the status command will verify which files have been modified. When we want to register those changes we will have to add them with add . so you are ready to make a commit. The commit makes the copy of that instant to be able to go back in time if necessary.
 
 
-
-
 ### <br>Time travel (Through commits)</br>
 
 ##### How we can move between the different commits that we have registered, suppose we have the following commits:
@@ -88,6 +86,89 @@ git checkout -- fileName.withExtension
 ```
 git reset --hard
 ```
+
+
+### <br>Modify files</br>
+
+##### We may want to rename a file, it is recommended to do it directly on the command line to register the changes with git.
+
+#### Change file name. 
+```
+git mv originalName.vue newName.vue
+```
+
+#### Delete files
+```
+git rm fileName.vue
+```
+#### Ignoring Files
+
+##### In order not to track folders or files, we must create the following file: .gitignore. Your example structure would be like this:
+```
+file.js // Ignore the file in question
+*.js // Ignore all files with .js extension
+node_modules/ //Ignore the whole folder
+```
+
+
+### <br>Branch</br>
+
+##### So far we have only worked on the "master" branch but we may need to create different branches for git traces.
+
+#### Create a new branch
+```
+git branch branchName
+```
+#### It shows us in which branch we are
+```
+git branch
+```
+#### We move to the new branch
+```
+git checkout branchName
+```
+#### We can merge the master branch with the new one. We move to the new branch
+```
+git merge branchName
+```
+#### Delete a branch
+```
+git branch -d branchName
+```
+
+
+### <br>Tags</br>
+
+##### With the tags we can make versions of our project.
+
+#### Create a tag
+```
+git tag alphaVersion -m "alpha version"
+```
+
+#### List tags
+```
+git tag
+```
+
+#### Delete tags
+```
+git tag -d tagsName
+```
+
+#### Make a version on a previous commit ex: f52f3da
+```
+git tag -a tagName f52f3da -m "version alpha"
+```
+
+#### Show tag information
+```
+git show tagName
+```
+
+
+
+
 
 
 
