@@ -35,6 +35,28 @@ git help
 ```
 git init
 ```
+#### See which files have not been registered
+```
+git status
+```
+#### Add all files to watch for changes
+```
+git add .
+```
+#### Create commit (current project snapshot)
+```
+git commit -m "my first commit"
+```
+#### Show the list of commits from newest to oldest
+```
+git log
+```
+##### In conclusion, we make changes to our files, the status command will verify which files have been modified. When we want to register those changes we will have to add them with add . so you are ready to make a commit. The commit makes the copy of that instant to be able to go back in time if necessary.
+
+
+
+
+
 
 
 
