@@ -17,7 +17,15 @@
 git version
 ```
 
-#### Registrar nuevo usuario asociado a git:
-> Don't put the email of your Github account as a username, it could cause problems in the future.
+#### Register new user associated with GIT:
+>   WARNING. Don't put the email of your Github account as a username, it could cause problems in the future.
+```
+git config --global user.name "my name"
+```
+####It is recommended to use the mail associated with Github
+```
+git config --global user.email "myemail@example.com"
+```
+
 
 
