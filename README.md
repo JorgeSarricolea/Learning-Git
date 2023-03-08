@@ -53,6 +53,38 @@ git log
 ```
 ##### In conclusion, we make changes to our files, the status command will verify which files have been modified. When we want to register those changes we will have to add them with add . so you are ready to make a commit. The commit makes the copy of that instant to be able to go back in time if necessary.
 
+### Time travel (Through commits)
+
+##### How we can move between the different commits that we have registered, suppose we have the following commits:
+
+>  f82f457 (HEAD -> master) more commands added
+>  f52f3da new commands in fundamentals.md
+>  e4ab8af my first commit
+
+#### We travel to the specific commit f52f3da
+```
+git reset --mixed f52f3da
+```
+#### We travel to the specific commit f52f3da and remove future changes
+```
+git reset --hard f52f3da
+```
+#### Show all changes even if we delete commits
+```
+git reflog
+```
+#### We travel to the specific commit f52f3da and we can restore the files
+```
+git reset --hard f52f3da
+```
+#### If we didn't commit but still want to revert the changes to a specific file we could use the following command:
+```
+git checkout -- fileName.withExtension
+```
+#### If we want to destroy all the changes without having made a commit we can use:
+```
+git reset --hard
+```
 
 
 
