@@ -10,7 +10,8 @@
 
 ### GIT Fundamentals and basic comands
 
-##### Let's learn the first commands with git
+#### Let's learn the first commands with GIT
+
 
 #### To display the git version
 ```
