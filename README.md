@@ -60,9 +60,9 @@ git log
 
 ##### How we can move between the different commits that we have registered, suppose we have the following commits:
 
->  f82f457 (HEAD -> master) more commands added
->  f52f3da new commands in fundamentals.md
->  e4ab8af my first commit
+>   f82f457 (HEAD -> master) more commands added
+>   f52f3da new commands in fundamentals.md
+>   e4ab8af my first commit
 
 #### We travel to the specific commit f52f3da
 ```
