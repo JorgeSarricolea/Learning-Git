@@ -53,6 +53,19 @@ git log
 ```
 ##### In conclusion, we make changes to our files, the status command will verify which files have been modified. When we want to register those changes we will have to add them with add . so you are ready to make a commit. The commit makes the copy of that instant to be able to go back in time if necessary.
 
+### Did you create a new repository in GitHub and you want to connect it with your local folder?
+
+#### Remember, fisrt command!
+```
+git init
+```
+#### After doing the "First commit" you will write the next 3 commands:
+```
+git branch -M main
+git remote add origin https://github.com/YourUser/Name-Of-Yoyr-Repository.git
+git push -u origin main
+```
+##### And that's it, you push your local repository to GitHub!
 
 ### <br>Time travel (Through commits)</br>
 
