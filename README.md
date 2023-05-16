@@ -62,7 +62,7 @@ git init
 #### After doing the "First commit" you will write the next 3 commands:
 ```
 git branch -M main
-git remote add origin https://github.com/YourUser/Name-Of-Yoyr-Repository.git
+git remote add origin https://github.com/Your-User-Name/Name-Of-Your-Repository.git
 git push -u origin main
 ```
 ##### And that's it, you push your local repository to GitHub!
