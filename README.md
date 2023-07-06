@@ -55,11 +55,11 @@ git log
 ##### In conclusion, we make changes to our files, the status command will verify which files have been modified. When we want to register those changes we will have to add them with add . so you are ready to make a commit. The commit makes the copy of that instant to be able to go back in time if necessary.
 
 ### How I can name my commits?
-#### The Conventional Commits specification is a lightweight convention on top of commit messages. It provides an easy set of rules for creating an explicit commit history; which makes it easier to write automated tools on top of. This convention dovetails with SemVer, by describing the features, fixes, and breaking changes made in commit messages.
+##### The Conventional Commits specification is a lightweight convention on top of commit messages. It provides an easy set of rules for creating an explicit commit history; which makes it easier to write automated tools on top of. This convention dovetails with SemVer, by describing the features, fixes, and breaking changes made in commit messages.
 
 #### The commit contains the following structural elements, to communicate intent to the consumers of your library:
 
-- fix: a commit of the type fix patches a bug in your codebase (this correlates with PATCH in Semantic Versioning).
+- [b]fix:[/b] a commit of the type fix patches a bug in your codebase (this correlates with PATCH in Semantic Versioning).
 
 - feat: a commit of the type feat introduces a new feature to the codebase (this correlates with MINOR in Semantic Versioning).
 
