@@ -59,13 +59,18 @@ git log
 
 #### The commit contains the following structural elements, to communicate intent to the consumers of your library:
 
-- [b]fix:[/b] a commit of the type fix patches a bug in your codebase (this correlates with PATCH in Semantic Versioning).
+- **fix:** A commit of the type fix patches a bug in your codebase (this correlates with PATCH in Semantic Versioning).
+- **feat:** A commit of the type feat introduces a new feature to the codebase (this correlates with MINOR in Semantic Versioning).
+- **build:** Changes related to the build system, external tools, or build configurations.
+- **chore:** Maintenance tasks, dependency updates, code refactoring without functional changes, changes to file structure, etc.
+- **ci:** Changes to the continuous integration configuration or scripts.
+- **docs:** Changes to documentation, such as adding, updating, or removing documentation files.
+- **style:** Changes to code style, such as whitespace, indentation, missing semicolons, etc., without underlying logic changes.
+- **refactor:** Code changes that don't fix bugs or add new features but improve the code structure, readability, or performance.
+- **perf:** Changes related to performance improvements.
+- **test:** Adding or modifying tests, both unit and integration tests.
 
-- feat: a commit of the type feat introduces a new feature to the codebase (this correlates with MINOR in Semantic Versioning).
-
-- BREAKING CHANGE: a commit that has a footer BREAKING CHANGE:, or appends a ! after the type/scope, introduces a breaking API change (correlating with MAJOR in Semantic Versioning). A BREAKING CHANGE can be part of commits of any type.
-
-- types other than fix: and feat: are allowed, for example @commitlint/config-conventional (based on the Angular convention) recommends build:, chore:, ci:, docs:, style:, refactor:, perf:, test:, and others.
+- **BREAKING CHANGE:** a commit that has a footer BREAKING CHANGE:, or appends a **!** after the type/scope, introduces a breaking API change (correlating with MAJOR in Semantic Versioning). A BREAKING CHANGE can be part of commits of any type.
 
 - footers other than BREAKING CHANGE: <description> may be provided and follow a convention similar to git trailer format.
 
