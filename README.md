@@ -39,9 +39,13 @@ git init
 ```
 git status
 ```
-#### Add all files to watch for changes
+#### Add all files to watch for changes...
 ```
 git add .
+```
+#### Or add one file files to watch for changes
+```
+git add fileName.txt
 ```
 #### Create commit (current project snapshot)
 ```
@@ -126,16 +130,19 @@ git reset --hard
 
 ### <br>Modify files</br>
 
-##### We may want to rename a file, it is recommended to do it directly on the command line to register the changes with git.
+##### We may want to rename, remove or delete a file, it is recommended to do it directly on the command line to register the changes with git.
 
 #### Change file name. 
 ```
-git mv originalName.vue newName.vue
+git mv originalName.txt newName.txt
 ```
-
-#### Delete files
+#### Delete a file
 ```
-git rm fileName.vue
+git rm fileName.txt
+```
+#### Delete a file (in the RAM)
+```
+git rm --cached fileName.txt
 ```
 #### Ignoring Files
 
