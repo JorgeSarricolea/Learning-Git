@@ -56,6 +56,11 @@ git commit -m "my first commit"
 ```
 git log
 ```
+#### Show the all the changes line by line in a code or file.
+```
+git show fileName.js
+```
+
 ##### In conclusion, we make changes to our files, the status command will verify which files have been modified. When we want to register those changes we will have to add them with add . so you are ready to make a commit. The commit makes the copy of that instant to be able to go back in time if necessary.
 
 ### How I can name my commits?
