@@ -155,7 +155,7 @@ Using git rm will completely delete this file from Git!
 ### What is the difference between git rm and git reset HEAD?
 The main difference between git rm and git reset HEAD is that git rm removes files from the repository and project history, while git reset takes changes out of the staging area and moves them from the workspace without affecting the repository's history.
 <br>
-<img src="gitrm-gitreset.pngg">
+<img src="gitrm-gitreset.png">
 <br>
 
 ### <br>Branch</br>
