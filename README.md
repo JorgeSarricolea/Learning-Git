@@ -117,14 +117,18 @@ git reset --hard abc12345
 ```
 git reflog
 ```
-#### If we didn't commit but still want to revert the changes to a specific file we could use the following command:
+#### The checkout command will allow us to see how the file originally looked before being modified by the current commits. You can see an example of how it would be used usng de commit ID:
 ```
-git checkout -- fileName.withExtension
+git checkout abc12345 fileName.js
 ```
-#### If we want to destroy all the changes without having made a commit we can use:
+#### Now, if we want to go back to the current version, the last commit we made, we can use the following command:
 ```
-git reset --hard
+git checkout master fileName.js
 ```
+#### I'll provide you with a graphical example of how the Git flowchart works:
+(URL de la Imagen)
+
+
 
 ### <br>Modify files</br>
 
@@ -206,16 +210,3 @@ git tag -a tagName f52f3da -m "version alpha"
 ```
 git show tagName
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
