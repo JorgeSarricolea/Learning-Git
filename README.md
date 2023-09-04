@@ -126,8 +126,7 @@ git checkout abc12345 fileName.js
 git checkout master fileName.js
 ```
 #### I'll provide you with a graphical example of how the Git flowchart works:
-(git-tree-flow.png)
-
+[<img src="git-tree-flow.png">]
 
 
 ### <br>Modify files</br>
