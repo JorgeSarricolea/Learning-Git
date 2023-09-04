@@ -30,7 +30,8 @@ git config --global user.email "myemail@example.com"
 ```
 git help
 ```
-#### My first repository. Start a new repository and create the hidden .git folder
+### My first repository. 
+#### Start a new repository and create the hidden .git folder
 ```
 git init
 ```
@@ -50,6 +51,10 @@ git add fileName.txt
 ```
 git commit -m "my first commit"
 ```
+#### Now, if we want to skip the step of adding changes and making a new commit in two separate commands, we can do both steps in one with the following command
+```
+git commit -am "my first commit"
+```
 
 #### Show the list of commits from newest to oldest
 ```
@@ -61,6 +66,18 @@ git show fileName.js
 ```
 
 ##### In conclusion, we make changes to our files, the status command will verify which files have been modified. When we want to register those changes we will have to add them with add . so you are ready to make a commit. The commit makes the copy of that instant to be able to go back in time if necessary.
+
+### We are working in a team and we need to clone or make a pull request, what's that?
+#### When we want to start working on an existing repository in a team, we use git clone. On the other hand, if we want to see the updates that the team has made to the project we are working on, we will create a pull request.
+
+#### To clone an existing repository in our local computer:
+```
+git clone url-of-the-repository-in-github
+```
+#### To make a pull request and see the new changes in the repository:
+```
+git pull url-of-the-repository-in-github
+```
 
 ### How I can name my commits?
 ##### The Conventional Commits specification is a lightweight convention on top of commit messages. It provides an easy set of rules for creating an explicit commit history; which makes it easier to write automated tools on top of. This convention dovetails with SemVer, by describing the features, fixes, and breaking changes made in commit messages.
