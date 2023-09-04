@@ -17,7 +17,6 @@
 ```
 git version
 ```
-
 #### Register new user associated with GIT:
 >   **WARNING**. Don't put the email of your Github account as a username, it could cause problems in the future.
 ```
@@ -153,13 +152,11 @@ git rm --cached fileName.txt
 
 Using git rm will completely delete this file from Git!
 
-##### In order not to track folders or files, we must create the following file: .gitignore. Your example structure would be like this:
-```
-file.js // Ignore the file in question
-*.js // Ignore all files with .js extension
-node_modules/ //Ignore the whole folder
-```
-
+### What is the difference between git rm and git reset HEAD?
+The main difference between git rm and git reset HEAD is that git rm removes files from the repository and project history, while git reset takes changes out of the staging area and moves them from the workspace without affecting the repository's history.
+<br>
+<img src="gitrm-gitreset.pngg">
+<br>
 
 ### <br>Branch</br>
 
