@@ -101,27 +101,21 @@ git push -u origin main
 
 ### <br>Time travel (Through commits)</br>
 
-##### How we can move between the different commits that we have registered, suppose we have the following commits:
-
->   <br>f82f457 (HEAD -> master) more commands added</br>
->   <br>f52f3da new commands in fundamentals.md</br>
->   <br>e4ab8af my first commit</br>
-
-#### We travel to the specific commit f52f3da
+##### How we can move between the different commits that we have registered, let's suppose we have the following commit with its respective ID:
 ```
-git reset --mixed f52f3da
+Commit ID: abc12345
 ```
-#### We travel to the specific commit f52f3da and remove future changes
+#### We travel to the specific commit abc12345, this change will keep all the changes we have made without deleting any commit.
 ```
-git reset --hard f52f3da
+git reset --soft abc12345
+```
+#### We travel to the specific commit abc12345 and remove all future changes. Warning, this will delete all changes that have been made without the possibility of recovery.
+```
+git reset --hard abc12345
 ```
 #### Show all changes even if we delete commits
 ```
 git reflog
-```
-#### We travel to the specific commit f52f3da and we can restore the files
-```
-git reset --hard f52f3da
 ```
 #### If we didn't commit but still want to revert the changes to a specific file we could use the following command:
 ```
@@ -131,7 +125,6 @@ git checkout -- fileName.withExtension
 ```
 git reset --hard
 ```
-
 
 ### <br>Modify files</br>
 
