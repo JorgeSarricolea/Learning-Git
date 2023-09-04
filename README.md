@@ -19,7 +19,7 @@ git version
 ```
 
 #### Register new user associated with GIT:
->   WARNING. Don't put the email of your Github account as a username, it could cause problems in the future.
+>   **WARNING**. Don't put the email of your Github account as a username, it could cause problems in the future.
 ```
 git config --global user.name "my name"
 ```
@@ -109,7 +109,7 @@ Commit ID: abc12345
 ```
 git reset --soft abc12345
 ```
-#### We travel to the specific commit abc12345 and remove all future changes. Warning, this will delete all changes that have been made without the possibility of recovery.
+#### We travel to the specific commit abc12345 and remove all future changes. **WARNING:** this will delete all changes that have been made without the possibility of recovery.
 ```
 git reset --hard abc12345
 ```
@@ -147,9 +147,9 @@ git rm fileName.txt
 git rm --cached fileName.txt
 ```
 #### Variations of Git rm:
-- [b]git rm --cached[/b] Removes files from the local repository and the staging area but keeps them on the hard disk. It stops tracking the change history of these files, so they become untracked.
+- **git rm --cached** will removes files from the local repository and the staging area but keeps them on the hard disk. It stops tracking the change history of these files, so they become untracked.
 
-- [b]git rm --force[/b] Deletes files from both Git and the hard disk. Git keeps everything, so we can recover deleted files if needed (using advanced commands).
+- **git rm --force** will deletes files from both Git and the hard disk. Git keeps everything, so we can recover deleted files if needed (using advanced commands).
 
 Using git rm will completely delete this file from Git!
 
