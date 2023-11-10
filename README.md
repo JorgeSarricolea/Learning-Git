@@ -10,69 +10,70 @@ It is a collaborative development platform or as I like to say it; "The social n
 
 # Index:
 
-- [GIT Fundamentals and basic comands](#GIT-Fundamentals-and-basic-comands)
+[GIT Fundamentals and basic comands](#GIT-Fundamentals-and-basic-comands)
+[My first repository](My-first-repository)
+[We need to clone or make a pull request, what's that?](We-need-to-clone-or-make-a-pull-request,-what's-that?)
 
 
 # GIT Fundamentals and basic comands
-
-### Let's learn the first commands with GIT
 
 To display the git version
 ```
 git version
 ```
-#### Register new user associated with GIT:
+Register new user associated with GIT:
 >   **WARNING**. Don't put the email of your Github account as a username, it could cause problems in the future.
 ```
 git config --global user.name "my name"
 ```
-#### It is recommended to use the mail associated with Github
+It is recommended to use the mail associated with Github
 ```
 git config --global user.email "myemail@example.com"
 ```
-#### To get help 
+To get help 
 ```
 git help
 ```
-### My first repository. 
-#### Start a new repository and create the hidden .git folder
+
+# My first repository. 
+
+Start a new repository and create the hidden .git folder
 ```
 git init
 ```
-#### See which files have not been registered
+See which files have not been registered
 ```
 git status
 ```
-#### Add all files to watch for changes...
+Add all files to watch for changes
 ```
 git add .
 ```
-#### Or add one file files to watch for changes
+Or add one file files to watch for changes
 ```
 git add fileName.txt
 ```
-#### Create commit (current project snapshot)
+Create commit (current project snapshot)
 ```
 git commit -m "my first commit"
 ```
-#### Now, if we want to skip the step of adding changes and making a new commit in two separate commands, we can do both steps in one with the following command
+Now, if we want to skip the step of adding changes and making a new commit in two separate commands, we can do both steps in one with the following command
 ```
 git commit -am "my first commit"
 ```
-
-#### Show the list of commits from newest to oldest
+Show the list of commits from newest to oldest
 ```
 git log
 ```
-#### Show the all the changes line by line in a code or file.
+Show the all the changes line by line in a code or file
 ```
 git show fileName.js
 ```
 
-##### In conclusion, we make changes to our files, the status command will verify which files have been modified. When we want to register those changes we will have to add them with add . so you are ready to make a commit. The commit makes the copy of that instant to be able to go back in time if necessary.
+In conclusion, we make changes to our files, the status command will verify which files have been modified. When we want to register those changes we will have to add them with add . so you are ready to make a commit. The commit makes the copy of that instant to be able to go back in time if necessary.
 
-### We are working in a team and we need to clone or make a pull request, what's that?
-#### When we want to start working on an existing repository in a team, we use git clone. On the other hand, if we want to see the updates that the team has made to the project we are working on, we will create a pull request.
+# We need to clone or make a pull request, what's that?
+When we want to start working on an existing repository in a team, we use git clone. On the other hand, if we want to see the updates that the team has made to the project we are working on, we will create a pull request.
 
 #### To clone an existing repository in our local computer:
 ```
