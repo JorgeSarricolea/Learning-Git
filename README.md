@@ -11,11 +11,11 @@ It is a collaborative development platform or as I like to say it; "The social n
 # Index:
 
 - [Connect to Github](#Connect-to-Github)
-- [My first repository](My-first-repository)
-- [We need to clone or make a pull request, what's that?](We-need-to-clone-or-make-a-pull-request,-what's-that?)
-- [How I can name my commits?](How-I-can-name-my-commits?)
-- [Connect a Github repository](Connect-a-Github-repository)
-- [Time travel (Through commits)](Time-travel-(Through-commits))
+- [My first repository](#My-first-repository)
+- [We need to clone or make a pull request, what's that?](#We-need-to-clone-or-make-a-pull-request,-what's-that?)
+- [How I can name my commits?](#How-I-can-name-my-commits?)
+- [Connect a Github repository](#Connect-a-Github-repository)
+- [Time travel (Through commits)](#Time-travel-(Through-commits))
 
 # Connect to Github
 
