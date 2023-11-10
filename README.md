@@ -208,3 +208,20 @@ Delete a branch
 ```
 git branch -d branchName
 ```
+
+# SSH link configuration
+Si eres usuario de Ubuntu, puede que hayas encontrado el problema que al hacer un push en un repositorio clonado (Incluso si eres el propietario de este), Git te pide que ingreses tu nombre de usuario y contraseña de Github, para evitar que esto ocurra cada vez que hagas push o simplemente quieres hacer una conexión a tu cuenta utilizando autenticación por SSH en lugar de HTTPS podrás seguir estos pasos para hacerlo.
+
+### 1. Genera una clave SSH:
+1.1. Abre una terminal en tu sistema.
+1.2. Ejecuta el siguiente comando para generar una nueva clave SSH (si aún no tienes una):
+```
+ssh-keygen -t rsa -b 4096 -C "youremail@example.com"
+```
+Reemplaza "tu_correo@example.com" con la dirección de correo electrónico asociada a tu cuenta de GitHub.
+
+1.3. Te pedirá que elijas la ubicación para guardar la clave. Por defecto, la clave se guarda en ~/.ssh/id_rsa (la clave privada) y ~/.ssh/id_rsa.pub (la clave pública). Si deseas guardarla en una ubicación diferente o con un nombre distinto, puedes especificarlo.
+1.4. También puedes agregar una contraseña a tu clave si lo deseas, pero esto no es necesario para la autenticación automática.
+
+### 2. 
+
