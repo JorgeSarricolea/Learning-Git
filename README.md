@@ -10,10 +10,9 @@ It is a collaborative development platform or as I like to say it; "The social n
 
 # Index:
 
-[GIT Fundamentals and basic comands](#GIT-Fundamentals-and-basic-comands)
-[My first repository](My-first-repository)
-[We need to clone or make a pull request, what's that?](We-need-to-clone-or-make-a-pull-request,-what's-that?)
-
+- [GIT Fundamentals and basic comands](#GIT-Fundamentals-and-basic-comands)
+- [My first repository](My-first-repository)
+- [We need to clone or make a pull request, what's that?](We-need-to-clone-or-make-a-pull-request,-what's-that?)
 
 # GIT Fundamentals and basic comands
 
