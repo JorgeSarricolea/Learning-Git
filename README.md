@@ -12,7 +12,7 @@
 
 ### Index:
 
-- [Let's learn the first commands with GIT](###Let's-learn-the-first-commands-with-GIT)
+- [Let's learn the first commands with GIT](#Let's-learn-the-first-commands-with-GIT)
 
 
 ### Let's learn the first commands with GIT
