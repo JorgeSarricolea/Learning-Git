@@ -15,7 +15,9 @@ It is a collaborative development platform or as I like to say it; "The social n
 - [We need to clone or make a pull request, what's that?](#We-need-to-clone-or-make-a-pull-request,-what's-that?)
 - [How I can name my commits?](#How-I-can-name-my-commits?)
 - [Connect a Github repository](#Connect-a-Github-repository)
-- [Time travel (Through commits)](#Time-travel-(Through-commits))
+- [Time traveling](#Time-traveling)
+- [Modify files](#Modify-files)
+- [Branches](#Branches)
 
 # Connect to Github
 
@@ -124,117 +126,85 @@ git push -u origin main
 ```
 And that's it, you push your local repository to GitHub!
 
-# <br>Time travel (Through commits)</br>
+# Time traveling
 
-##### How we can move between the different commits that we have registered, let's suppose we have the following commit with its respective ID:
+How we can move between the different commits that we have registered, let's suppose we have the following commit with its respective ID:
 ```
 Commit ID: abc12345
 ```
-#### We travel to the specific commit abc12345, this change will keep all the changes we have made without deleting any commit.
+We travel to the specific commit abc12345, this change will keep all the changes we have made without deleting any commit.
 ```
 git reset --soft abc12345
 ```
-#### We travel to the specific commit abc12345 and remove all future changes. **WARNING:** this will delete all changes that have been made without the possibility of recovery.
+We travel to the specific commit abc12345 and remove all future changes. **WARNING:** this will delete all changes that have been made without the possibility of recovery.
 ```
 git reset --hard abc12345
 ```
-#### Show all changes even if we delete commits
+Show all changes even if we delete commits
 ```
 git reflog
 ```
-#### The checkout command will allow us to see how the file originally looked before being modified by the current commits. You can see an example of how it would be used usng de commit ID:
+The checkout command will allow us to see how the file originally looked before being modified by the current commits. You can see an example of how it would be used usng de commit ID:
 ```
 git checkout abc12345 fileName.js
 ```
-#### Now, if we want to go back to the current version, the last commit we made, we can use the following command:
+Now, if we want to go back to the current version, the last commit we made, we can use the following command:
 ```
 git checkout master fileName.js
 ```
-#### I'll provide you with a graphical example of how the Git flowchart works:
+I'll provide you with a graphical example of how the Git flowchart works:
 <br>
 <img src="git-tree-flow.png">
 <br>
 
-### <br>Modify files</br>
+# Modify files
+We may want to rename, remove or delete a file, it is recommended to do it directly on the command line to register the changes with git.
 
-##### We may want to rename, remove or delete a file, it is recommended to do it directly on the command line to register the changes with git.
-
-#### Change file name. 
+Change file name. 
 ```
 git mv originalName.txt newName.txt
 ```
-#### Delete a file
+Delete a file
 ```
 git rm fileName.txt
 ```
-#### Delete a file (in the RAM)
+Delete a file (in the RAM)
 ```
 git rm --cached fileName.txt
 ```
-#### Variations of Git rm:
+Variations of Git rm:
 - **git rm --cached** will removes files from the local repository and the staging area but keeps them on the hard disk. It stops tracking the change history of these files, so they become untracked.
 
 - **git rm --force** will deletes files from both Git and the hard disk. Git keeps everything, so we can recover deleted files if needed (using advanced commands).
 
-##### Using git rm will completely delete this file from Git!
+Using git rm will completely delete this file from Git!
 
-### What is the difference between git rm and git reset HEAD?
-##### The main difference between git rm and git reset HEAD is that git rm removes files from the repository and project history, while git reset takes changes out of the staging area and moves them from the workspace without affecting the repository's history.
+## What is the difference between git rm and git reset HEAD?
+The main difference between git rm and git reset HEAD is that git rm removes files from the repository and project history, while git reset takes changes out of the staging area and moves them from the workspace without affecting the repository's history.
 <br>
 <img src="gitrm-gitreset.png">
 <br>
 
-### <br>Branch</br>
+# Branches
+So far we have only worked on the "master" branch but we may need to create different branches for git traces.
 
-##### So far we have only worked on the "master" branch but we may need to create different branches for git traces.
-
-#### Create a new branch
+Create a new branch
 ```
 git branch branchName
 ```
-#### It shows us in which branch we are
+It shows us in which branch we are
 ```
 git branch
 ```
-#### We move to the new branch
+We move to the new branch
 ```
 git checkout branchName
 ```
-#### We can merge the master branch with the new one. We move to the new branch
+We can merge the master branch with the new one. We move to the new branch
 ```
 git merge branchName
 ```
-#### Delete a branch
+Delete a branch
 ```
 git branch -d branchName
-```
-
-
-### <br>Tags</br>
-
-##### With the tags we can make versions of our project.
-
-#### Create a tag
-```
-git tag alphaVersion -m "alpha version"
-```
-
-#### List tags
-```
-git tag
-```
-
-#### Delete tags
-```
-git tag -d tagsName
-```
-
-#### Make a version on a previous commit ex: f52f3da
-```
-git tag -a tagName f52f3da -m "version alpha"
-```
-
-#### Show tag information
-```
-git show tagName
 ```
