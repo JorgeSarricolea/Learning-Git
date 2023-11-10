@@ -10,11 +10,14 @@ It is a collaborative development platform or as I like to say it; "The social n
 
 # Index:
 
-- [GIT Fundamentals and basic comands](#GIT-Fundamentals-and-basic-comands)
+- [Connect to Github](#Connect-to-Github)
 - [My first repository](My-first-repository)
 - [We need to clone or make a pull request, what's that?](We-need-to-clone-or-make-a-pull-request,-what's-that?)
+- [How I can name my commits?](How-I-can-name-my-commits?)
+- [Connect a Github repository](Connect-a-Github-repository)
+- [Time travel (Through commits)](Time-travel-(Through-commits))
 
-# GIT Fundamentals and basic comands
+# Connect to Github
 
 To display the git version
 ```
@@ -74,19 +77,19 @@ In conclusion, we make changes to our files, the status command will verify whic
 # We need to clone or make a pull request, what's that?
 When we want to start working on an existing repository in a team, we use git clone. On the other hand, if we want to see the updates that the team has made to the project we are working on, we will create a pull request.
 
-#### To clone an existing repository in our local computer:
+To clone an existing repository in our local computer:
 ```
 git clone url-of-the-repository-in-github
 ```
-#### To make a pull request and see the new changes in the repository:
+To make a pull request and see the new changes in the repository:
 ```
 git pull url-of-the-repository-in-github
 ```
 
-### How I can name my commits?
-##### The Conventional Commits specification is a lightweight convention on top of commit messages. It provides an easy set of rules for creating an explicit commit history; which makes it easier to write automated tools on top of. This convention dovetails with SemVer, by describing the features, fixes, and breaking changes made in commit messages.
+# How I can name my commits?
+The Conventional Commits specification is a lightweight convention on top of commit messages. It provides an easy set of rules for creating an explicit commit history; which makes it easier to write automated tools on top of. This convention dovetails with SemVer, by describing the features, fixes, and breaking changes made in commit messages.
 
-#### The commit contains the following structural elements, to communicate intent to the consumers of your library:
+The commit contains the following structural elements, to communicate intent to the consumers of your library:
 
 - **fix:** A commit of the type fix patches a bug in your codebase (this correlates with PATCH in Semantic Versioning).
 - **feat:** A commit of the type feat introduces a new feature to the codebase (this correlates with MINOR in Semantic Versioning).
@@ -105,21 +108,23 @@ git pull url-of-the-repository-in-github
 
 Additional types are not mandated by the Conventional Commits specification, and have no implicit effect in Semantic Versioning (unless they include a BREAKING CHANGE). A scope may be provided to a commit’s type, to provide additional contextual information and is contained within parenthesis, e.g., feat(parser): add ability to parse arrays.
 
-### Did you create a new repository in GitHub and you want to connect it with your local folder?
 
-#### Remember, fisrt command!
+# Connect a Github repository
+Did you create a new repository in GitHub and you want to connect it with your local folder?
+
+Remember, fisrt command!
 ```
 git init
 ```
-#### After doing the "First commit" you will write the next 3 commands:
+After doing the "First commit" you will write the next 3 commands:
 ```
 git branch -M main
 git remote add origin https://github.com/Your-User-Name/Name-Of-Your-Repository.git
 git push -u origin main
 ```
-##### And that's it, you push your local repository to GitHub!
+And that's it, you push your local repository to GitHub!
 
-### <br>Time travel (Through commits)</br>
+# <br>Time travel (Through commits)</br>
 
 ##### How we can move between the different commits that we have registered, let's suppose we have the following commit with its respective ID:
 ```
