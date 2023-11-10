@@ -218,10 +218,36 @@ Si eres usuario de Ubuntu, puede que hayas encontrado el problema que al hacer u
 ```
 ssh-keygen -t rsa -b 4096 -C "youremail@example.com"
 ```
-Reemplaza "tu_correo@example.com" con la dirección de correo electrónico asociada a tu cuenta de GitHub.
+Reemplaza "youremail@example.com" con la dirección de correo electrónico asociada a tu cuenta de GitHub.
 
-1.3. Te pedirá que elijas la ubicación para guardar la clave. Por defecto, la clave se guarda en ~/.ssh/id_rsa (la clave privada) y ~/.ssh/id_rsa.pub (la clave pública). Si deseas guardarla en una ubicación diferente o con un nombre distinto, puedes especificarlo.
+1.3. Te pedirá que elijas la ubicación para guardar la clave. Por defecto, la clave se guarda en ~/.ssh/id_rsa (la clave privada) y ~/.ssh/id_rsa.pub (la clave pública). Si deseas guardarla en una ubicación diferente o con un nombre distinto, puedes especificarlo.</br>
 1.4. También puedes agregar una contraseña a tu clave si lo deseas, pero esto no es necesario para la autenticación automática.
 
-### 2. 
+### 2. Agrega la clave SSH a tu agente SSH:
+2.1. Ejecuta el siguiente comando para agregar tu clave SSH al agente SSH:
+```
+ssh-add ~/.ssh/id_rsa
+```
+
+### 3. Agrega la clave pública SSH a tu cuenta de GitHub:
+3.1. Utiliza el comando cat para mostrar el contenido de tu clave pública SSH en la terminal. Por ejemplo:
+```
+cat ~/.ssh/id_rsa.pub
+```
+Este comando mostrará la clave pública SSH en la terminal.
+
+3.2. Selecciona el texto que aparece en la terminal con el mouse para copiarlo al portapapeles. Otra opción es redirigir la salida del comando cat directamente al portapapeles utilizando el comando xclip. Si no tienes xclip instalado, puedes instalarlo usando el siguiente comando:
+```
+sudo apt-get update
+sudo apt-get install xclip
+```
+3.3. Luego, utiliza xclip para copiar la clave pública al portapapeles:
+
+```
+cat ~/.ssh/id_rsa.pub | xclip -sel clip
+```
+El comando anterior copiará la clave pública SSH al portapapeles.
+
+
+
 
