@@ -18,6 +18,7 @@ It is a collaborative development platform or as I like to say it; "The social n
 - [Time traveling](#Time-traveling)
 - [Modify files](#Modify-files)
 - [Branches](#Branches)
+- [SSH link configuration](#SSH-link-configuration)
 
 # Connect to Github
 
@@ -210,44 +211,51 @@ git branch -d branchName
 ```
 
 # SSH link configuration
-Si eres usuario de Ubuntu, puede que hayas encontrado el problema que al hacer un push en un repositorio clonado (Incluso si eres el propietario de este), Git te pide que ingreses tu nombre de usuario y contraseña de Github, para evitar que esto ocurra cada vez que hagas push o simplemente quieres hacer una conexión a tu cuenta utilizando autenticación por SSH en lugar de HTTPS podrás seguir estos pasos para hacerlo.
+Si you're an Ubuntu user, you may have encountered the issue where, when pushing to a cloned repository (even if you're the owner), Git prompts you to enter your GitHub username and password. To prevent this from happening every time you push or if you simply want to establish a connection to your account using SSH authentication instead of HTTPS, you can follow these steps.
 
-### 1. Genera una clave SSH:
-1.1. Abre una terminal en tu sistema. </br>
-1.2. Ejecuta el siguiente comando para generar una nueva clave SSH (si aún no tienes una):
+### 1. Generate an SSH key:
+1.1. Open a terminal on your system. </br>
+1.2. Run the following command to generate a new SSH key (if you don't have one yet):
 ```
 ssh-keygen -t rsa -b 4096 -C "youremail@example.com"
 ```
-Reemplaza "youremail@example.com" con la dirección de correo electrónico asociada a tu cuenta de GitHub.
+Replace "youremail@example.com" with the email address associated with your GitHub account.
 
-1.3. Te pedirá que elijas la ubicación para guardar la clave. Por defecto, la clave se guarda en ~/.ssh/id_rsa (la clave privada) y ~/.ssh/id_rsa.pub (la clave pública). Si deseas guardarla en una ubicación diferente o con un nombre distinto, puedes especificarlo.</br>
-1.4. También puedes agregar una contraseña a tu clave si lo deseas, pero esto no es necesario para la autenticación automática.
+1.3. It will prompt you to choose the location to save the key. By default, the key is saved in ~/.ssh/id_rsa (private key) and ~/.ssh/id_rsa.pub (public key). If you want to save it in a different location or with a different name, you can specify it.</br>
+1.4. You can also add a password to your key if you wish, but it's not necessary for automatic authentication.
 
-### 2. Agrega la clave SSH a tu agente SSH:
-2.1. Ejecuta el siguiente comando para agregar tu clave SSH al agente SSH:
+### 2. Add the SSH key to your SSH agent:
+2.1. Run the following command to add your SSH key to the SSH agent:
 ```
 ssh-add ~/.ssh/id_rsa
 ```
 
-### 3. Agrega la clave pública SSH a tu cuenta de GitHub:
-3.1. Utiliza el comando cat para mostrar el contenido de tu clave pública SSH en la terminal. Por ejemplo:
+### 3. Add the SSH public key to your GitHub account:
+3.1. Use the cat command to display the content of your SSH public key in the terminal. For example:
 ```
 cat ~/.ssh/id_rsa.pub
 ```
-Este comando mostrará la clave pública SSH en la terminal.
+This command will show the SSH public key in the terminal.
 
-3.2. Selecciona el texto que aparece en la terminal con el mouse para copiarlo al portapapeles. Otra opción es redirigir la salida del comando cat directamente al portapapeles utilizando el comando xclip. Si no tienes xclip instalado, puedes instalarlo usando el siguiente comando:
+3.2. Select the text that appears in the terminal with the mouse to copy it to the clipboard. Another option is to redirect the output of the cat command directly to the clipboard using the xclip command. If you don't have xclip installed, you can install it using the following command:
 ```
 sudo apt-get update
 sudo apt-get install xclip
 ```
-3.3. Luego, utiliza xclip para copiar la clave pública al portapapeles:
-
+3.3. Then, use xclip to copy the public key to the clipboard:
 ```
 cat ~/.ssh/id_rsa.pub | xclip -sel clip
 ```
-El comando anterior copiará la clave pública SSH al portapapeles.
+The above command will copy the SSH public key to the clipboard.
 
+### 4. Configure Git to use SSH:
+4.1. Open a terminal and run the following commands to configure Git to use SSH instead of HTTPS:
+```
+git config --global user.name "your name"
+git config --global user.email "youremail@example.com"
+git config --global url."git@github.com:".insteadOf "https://github.com/"
+```
+Replace "your name" and "youremail@example.com" with your name and email address associated with your GitHub account.
 
-
-
+### Done:)
+Now, when you push to a GitHub repository, Git will use SSH authentication and won't prompt you for your username and password. Make sure you're cloning or working with remote repositories that use SSH URLs instead of HTTPS.
