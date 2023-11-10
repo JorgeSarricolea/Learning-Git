@@ -8,7 +8,7 @@ Click here to [download Git](https://git-scm.com).
 
 It is a collaborative development platform or as I like to say it; "The social network of a programmer" that is used to host projects (in the cloud) using the Git version control system. It also has a very useful tool that is GitHub Pages where we can publish our static projects (HTML, CSS and JS or other types of projects) for free.
 
-### Index:
+# Index:
 
 - [GIT Fundamentals and basic comands](#GIT-Fundamentals-and-basic-comands)
 
